@@ -8,7 +8,7 @@
 
 
 User.create([
-                {name: "Example User", email: "user@example.com",password: "foobar", password_confirmation: "foobar"},
+                {name: "Example User", email: "jajajaja@example.com",password: "foobar", password_confirmation: "foobar"},
                 {name: "Juan Ramirez", email: "juan@example.com",password: "juan01", password_confirmation: "juan01"},
                 {name: "Pablo Londono", email: "pablo@example.com",password: "foobar", password_confirmation: "foobar"},
                 {name: "Carlos Perez", email: "carlos@example.com",password: "foobar", password_confirmation: "foobar"},
