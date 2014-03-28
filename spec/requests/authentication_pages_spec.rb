@@ -70,6 +70,17 @@ describe "Authentication" do
         end
       end
 
+      describe "as admin user" do
+        let(:admin) { FactoryGirl.create(:admin) }
+        before { valid_signin admin }
+
+        describe "should not be able to delete himself by submitting a DELETE request to the Users#destroy action" do
+          specify do
+            expect { delete user_path(admin) }.not_to change(User, :count).by(-1)
+          end
+        end
+      end
+
       describe "as non-admin user" do
         let(:user) { FactoryGirl.create(:user) }
         let(:non_admin) { FactoryGirl.create(:user) }

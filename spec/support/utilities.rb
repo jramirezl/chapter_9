@@ -10,9 +10,7 @@ def sign_in(user)
 end
 
 def valid_signin(user)
-  fill_in "Email",    with: user.email
-  fill_in "Password", with: user.password
-  click_button "Sign in"
+  sign_in(user)
 end
 
 RSpec::Matchers.define :have_error_message do |message|
@@ -25,7 +23,7 @@ def sample_user
   fill_in "Name",         with: "Example User"
   fill_in "Email",        with: "user@example.com"
   fill_in "Password",     with: "foobar"
-  fill_in "Confirmation", with: "foobar"
+  fill_in "Confirm Password", with: "foobar"
 end
 
 def valid_signin_upcase(user)
